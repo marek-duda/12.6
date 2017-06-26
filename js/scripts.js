@@ -5,13 +5,12 @@ $(document).ready(function() {
     $('#search').click(searchCountries);
 
     function searchCountries() { 
-        var countryName = $('#country-name').val(); 
-        if(!countryName.length) countryName = 'Poland'; 
+        var countryName = $('#country-name').val() || 'Poland';  
         $.ajax({ 
             url: url + countryName, 
             method: 'GET', 
             success: showCountriesList 
-		}); 
+        }); 
 	}
 })
 
