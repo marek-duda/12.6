@@ -11,7 +11,7 @@ $(document).ready(function() {
             method: 'GET', 
             success: showCountriesList 
         }); 
-	}
+    }
 })
 
 function showCountriesList(resp) { 
